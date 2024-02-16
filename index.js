@@ -1,9 +1,7 @@
 const express = require("express");
-const ejs = require("ejs");
 const path = require("path");
 const app = express();
 const PORT = 5000;
-var fs = require("fs");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
