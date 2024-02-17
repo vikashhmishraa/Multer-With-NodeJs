@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "startLocal": "nodemon index.js",
+    "startS3": "nodemon server.js",
+    "startBoth": "concurrently \"npm run startLocal\" \"npm run startS3\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1560.0",
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.4",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^2.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
