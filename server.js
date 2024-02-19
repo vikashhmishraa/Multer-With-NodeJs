@@ -113,7 +113,7 @@ app.post("/delete-image", (req, res) => {
       console.log(err, err.stack);
       return res.status(500).send("Failed to delete image");
     }
-    res.redirect("/list"); // Redirect back to the gallery page
+    res.redirect("/media"); // Redirect back to the gallery page
   });
 });
 
